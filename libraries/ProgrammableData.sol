@@ -3,15 +3,6 @@ pragma solidity ^0.8.20;
 
 import "./Precompiles.sol";
 
-// public struct BytesRangeSpecifier {
-//     uint8 index;
-//     uint16 chunk_offset;
-//     // clamped to uint18
-//     uint24 byte_offset;
-//     // clamped to uint34
-//     uint40 length;
-// }
-
 contract ProgrammableData {
     /**
      * @notice Reads all bytes from the first BytesRange in the access list
@@ -84,42 +75,4 @@ contract ProgrammableData {
                 )
             );
     }
-
-    // function readBytesFromChunkRange(
-    //     uint8 chunk_range_index,
-    //     uint24 byte_offset,
-    //     uint40 length
-    // ) public view returns (bool success, bytes memory data) {
-    //     return
-    //         readBytesFromChunkRange(
-    //             chunk_range_index,
-    //             uint16(0),
-    //             byte_offset,
-    //             length
-    //         );
-    // }
-
-    // function readBytesFromChunkRange(
-    //     uint8 chunk_range_index,
-    //     uint16 chunk_offset,
-    //     uint24 byte_offset,
-    //     uint40 length
-    // ) public view returns (bool success, bytes memory data) {
-    //     BytesRangeSpecifier memory range_specifier = BytesRangeSpecifier(
-    //         chunk_range_index,
-    //         chunk_offset,
-    //         byte_offset,
-    //         length
-    //     );
-    //     return readByteRange(range_specifier);
-    // }
-
-    // function readByteRange(
-    //     BytesRangeSpecifier memory read_range
-    // ) public view returns (bool success, bytes memory data) {
-    //     return
-    //         address(PD_READ_PRECOMPILE_ADDRESS).staticcall(
-    //             abi.encode(bytes1(READ_CUSTOM_BYTE_RANGE), read_range)
-    //         );
-    // }
 }
