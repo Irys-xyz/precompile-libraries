@@ -1,0 +1,12 @@
+{
+  "name": "@irys/solidity",
+  "version": "0.0.1",
+  "description": "Solidity libraries for the Irys network",
+  "repository": "https://github.com/Irys-xyz/solidity",
+  "author": "Jesse <jesse@irys.xyz>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "/libraries/**/*.sol"
+  ]
+}
